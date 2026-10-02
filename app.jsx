@@ -1,9 +1,31 @@
 import { useEffect, useState } from "react";
 import "./styles.css";
 
+import kevin from "./kevin.jpg";
+import feature from "./feature.jpg";
+
+import heroVideo from "./hero-coast-web.mp4";
+import heroPoster from "./hero-coast-poster.jpg";
+
+import kevinWhiteLogo from "./kevinscottwhite.png";
+import kevinNavyLogo from "./kscottlogo2.png";
+
+import royalWhite from "./royal.png";
+import royalNavy from "./royalnavy.png";
+
+import knotLogo from "./KSRE_v2_knot_navy_blue.png";
+
+import coastErik from "./erik-mclean-bVE8tpEvjDE-unsplash.jpg";
+import coastAudrey from "./audrey-dandurand-EdeJfwWNa70-unsplash.jpg";
+import lighthouse from "./robert-langlois-b1zUUDDt7oY-unsplash.jpg";
+import redHouse from "./snap-shoot-42GlMxOlD4w-unsplash.jpg";
+import halifax from "./jonathan-cooper-73NhUAQBoHI-unsplash.jpg";
+import waterfront from "./livia-widjaja-VuO467wMZQI-unsplash.jpg";
+import lifestyle from "./karl-hedin-0444my5elHQ-unsplash.jpg";
+
 const properties = [
   {
-    image: "/assets/snap-shoot-42GlMxOlD4w-unsplash.jpg",
+    image: redHouse,
     status: "Conditionally Sold",
     title: "83 Lakecrest Drive",
     place: "East Uniacke, NS",
@@ -11,7 +33,7 @@ const properties = [
     mls: "MLS® 202622474",
   },
   {
-    image: "/assets/livia-widjaja-VuO467wMZQI-unsplash.jpg",
+    image: waterfront,
     status: "For Sale",
     title: "12337 Highway 3 Highway",
     place: "Rhodes Corner, NS",
@@ -19,7 +41,7 @@ const properties = [
     mls: "MLS® 202621750",
   },
   {
-    image: "/assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg",
+    image: lighthouse,
     status: "For Sale",
     title: "5019 201 Highway",
     place: "West Paradise, NS",
@@ -30,43 +52,43 @@ const properties = [
 
 const communities = [
   {
-    image: "/assets/snap-shoot-42GlMxOlD4w-unsplash.jpg",
+    image: redHouse,
     title: "Annapolis Valley Region",
   },
   {
-    image: "/assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg",
+    image: halifax,
     title: "Halifax & HRM Region",
   },
   {
-    image: "/assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg",
+    image: lighthouse,
     title: "South Shore",
   },
   {
-    image: "/assets/livia-widjaja-VuO467wMZQI-unsplash.jpg",
+    image: waterfront,
     title: "Yarmouth Region",
   },
   {
-    image: "/assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg",
+    image: coastAudrey,
     title: "Cape Breton Region",
   },
   {
-    image: "/assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg",
+    image: coastErik,
     title: "Highland Region",
   },
 ];
 
 const posts = [
   {
-    image: "/assets/karl-hedin-0444my5elHQ-unsplash.jpg",
+    image: lifestyle,
     title: "Every Home Has a Story Worth Telling",
   },
   {
-    image: "/assets/kevin.jpg",
+    image: kevin,
     title:
       "Market Knowledge is Great, But Your Agent’s Network Can Make All The Difference",
   },
   {
-    image: "/assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg",
+    image: coastErik,
     title: "Which Home Renovations Add the Most Sale Value?",
   },
 ];
@@ -122,21 +144,13 @@ function Header({ onHero }) {
         <div className="brand-group">
           <img
             className="ks-brand"
-            src={
-              onHero
-                ? "/assets/kevinscottwhite.png"
-                : "/assets/kscottlogo2.png"
-            }
+            src={onHero ? kevinWhiteLogo : kevinNavyLogo}
             alt="Kevin Scott Real Estate Team"
           />
 
           <img
             className="royal-brand"
-            src={
-              onHero
-                ? "/assets/royal.png"
-                : "/assets/royalnavy.png"
-            }
+            src={onHero ? royalWhite : royalNavy}
             alt="Royal LePage Atlantic"
           />
         </div>
@@ -162,21 +176,22 @@ function Header({ onHero }) {
 
 function Hero() {
   return (
-    <section className="hero" id="hero">
-      <div className="hero-poster" />
-
+    <section
+      className="hero"
+      id="hero"
+      style={{
+        backgroundImage: `url(${heroPoster})`,
+      }}
+    >
       <video
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
-        poster="/assets/hero-coast-poster.jpg"
+        poster={heroPoster}
       >
-        <source
-          src="/assets/hero-coast-web.mp4"
-          type="video/mp4"
-        />
+        <source src={heroVideo} type="video/mp4" />
       </video>
 
       <div className="hero-content">
@@ -232,7 +247,7 @@ function Intro() {
 
           <div className="award-placeholder royal">
             <img
-              src="/assets/royalnavy.png"
+              src={royalNavy}
               alt="Royal LePage Atlantic"
             />
           </div>
@@ -244,21 +259,22 @@ function Intro() {
 
 function About() {
   return (
-    <section className="about" id="about">
+    <section
+      className="about"
+      id="about"
+      style={{
+        backgroundImage: `url(${halifax})`,
+      }}
+    >
       <div className="about-inner">
         <div className="about-photo">
-          <img
-            src="/assets/kevin.jpg"
-            alt="Kevin Scott"
-          />
+          <img src={kevin} alt="Kevin Scott" />
         </div>
 
         <div className="about-copy">
           <h2>MEET KEVIN</h2>
 
-          <h3>
-            THE FOUNDER AND CEO
-          </h3>
+          <h3>THE FOUNDER AND CEO</h3>
 
           <p>
             I’m Kevin Scott—an award-winning REALTOR®, a marketing
@@ -325,7 +341,7 @@ function Featured() {
       <div className="feature-hero">
         <div className="feature-image">
           <img
-            src="/assets/feature.jpg"
+            src={feature}
             alt="Featured property"
           />
         </div>
@@ -410,7 +426,13 @@ function Featured() {
 
 function NovaScotia() {
   return (
-    <section className="nova" id="nova">
+    <section
+      className="nova"
+      id="nova"
+      style={{
+        backgroundImage: `url(${coastErik})`,
+      }}
+    >
       <div className="nova-copy">
         <div className="kicker">
           NOVA SCOTIA
@@ -440,10 +462,7 @@ function NovaScotia() {
 
 function Communities() {
   return (
-    <section
-      className="communities"
-      id="communities"
-    >
+    <section className="communities" id="communities">
       <h2>
         Nova Scotia <em>Communities</em>
       </h2>
@@ -511,11 +530,17 @@ function Market() {
 
 function CTA() {
   return (
-    <section className="cta" id="contact">
+    <section
+      className="cta"
+      id="contact"
+      style={{
+        backgroundImage: `url(${coastAudrey})`,
+      }}
+    >
       <div className="cta-inner">
         <img
           className="cta-knot"
-          src="/assets/KSRE_v2_knot_navy_blue.png"
+          src={knotLogo}
           alt=""
         />
 
@@ -544,7 +569,7 @@ function Footer() {
     <footer className="footer">
       <img
         className="ks-white"
-        src="/assets/kevinscottwhite.png"
+        src={kevinWhiteLogo}
         alt="Kevin Scott Real Estate Team"
       />
 
@@ -568,7 +593,7 @@ function Footer() {
 
       <img
         className="royal-white"
-        src="/assets/royal.png"
+        src={royalWhite}
         alt="Royal LePage Atlantic"
       />
 
