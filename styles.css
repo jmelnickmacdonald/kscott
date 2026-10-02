@@ -13,7 +13,6 @@
   --serif: "Cormorant Garamond", Georgia, serif;
 
   --header-h: 94px;
-  --max: 1050px;
 }
 
 * {
@@ -52,23 +51,15 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-
   min-height: 46px;
   padding: 0 24px;
-
   border: 1px solid currentColor;
-
   background: transparent;
-
   font-family: var(--sans);
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
-  transition:
-    opacity 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .btn::after {
@@ -86,33 +77,23 @@ a {
   color: #fff;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-
   z-index: 100;
-
   height: var(--header-h);
-
   display: flex;
   align-items: center;
-
   background: rgba(255, 255, 255, 0.98);
-
   color: var(--navy);
-
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-
   transition:
     background 0.25s ease,
-    color 0.25s ease,
-    box-shadow 0.25s ease;
+    color 0.25s ease;
 }
 
 .site-header.over-hero {
@@ -123,36 +104,29 @@ a {
 
 .header-inner {
   width: 100%;
-
   padding: 0 28px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 30px;
 }
 
 .brand-group {
   display: flex;
   align-items: center;
-
   gap: 8px;
-
   min-width: 330px;
 }
 
 .ks-brand {
   width: 132px;
   height: 48px;
-
   object-fit: contain;
 }
 
 .royal-brand {
   width: 190px;
   height: 44px;
-
   object-fit: contain;
 }
 
@@ -160,19 +134,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
   gap: 30px;
-
   white-space: nowrap;
 }
 
 .nav a {
   font-size: 10px;
   font-weight: 400;
-  letter-spacing: 0.015em;
   text-transform: uppercase;
-
-  transition: opacity 0.2s ease;
 }
 
 .nav a:hover {
@@ -181,144 +150,94 @@ a {
 
 .menu-toggle {
   display: none;
-
   border: 0;
   background: none;
-
   color: inherit;
-
   font-size: 26px;
-
-  cursor: pointer;
 }
 
-/* =========================================
-   HERO
-========================================= */
+/* HERO */
 
 .hero {
   position: relative;
-
   height: 100vh;
   min-height: 720px;
-
   overflow: hidden;
-
-  background: #557183;
-}
-
-.hero video,
-.hero-poster {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-.hero-poster {
-  background:
-    url("/assets/hero-coast-poster.jpg")
-    center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero video {
+  position: absolute;
+  inset: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   z-index: 2;
-
   background: rgba(12, 43, 62, 0.14);
 }
 
 .hero-content {
   position: absolute;
   inset: 0;
-
   z-index: 3;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding-top: 35px;
-
   text-align: center;
   color: #fff;
 }
 
 .hero-title {
   font-family: var(--serif);
-  font-size: 47px;
-  font-weight: 400;
   line-height: 1.08;
-
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
 
 .hero-title .team {
   display: block;
-
   font-size: 45px;
 }
 
 .hero-title .trusted {
   display: block;
-
   margin-top: 7px;
-
   font-size: 56px;
 }
 
 .hero-title .from {
   display: block;
-
   margin-top: -4px;
-
   font-size: 58px;
   font-style: italic;
 }
 
-/* =========================================
-   INTRO
-========================================= */
+/* INTRO */
 
 .intro {
   padding: 86px 24px 78px;
-
   background: #fff;
-
   text-align: center;
 }
 
 .intro h2 {
   margin: 0;
-
   color: var(--brown);
-
   font-family: var(--serif);
   font-size: 47px;
-  font-weight: 400;
-  line-height: 1.1;
-}
-
-.intro h2 em {
   font-weight: 400;
 }
 
 .intro .lead {
   width: min(760px, 100%);
-
   margin: 23px auto 0;
-
   font-family: var(--serif);
   font-size: 25px;
   line-height: 1.45;
@@ -326,21 +245,17 @@ a {
 
 .intro .script {
   margin-top: 18px;
-
   color: var(--navy);
-
   font-family: var(--serif);
-  font-size: 26px;
   font-style: italic;
+  font-size: 26px;
 }
 
 .intro-rule {
   width: min(1060px, calc(100% - 50px));
   height: 1px;
-
-  margin: 60px auto 0;
-
   background: #ded9d2;
+  margin: 60px auto 0;
 }
 
 .awards {
@@ -349,35 +264,27 @@ a {
 
 .awards h3 {
   margin: 0 0 46px;
-
   font-family: var(--serif);
   font-size: 28px;
-  font-weight: 500;
   letter-spacing: 0.18em;
 }
 
 .award-row {
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  align-items: center;
   gap: 90px;
 }
 
 .award-placeholder {
   width: 170px;
   height: 115px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   color: #111;
-
   font-size: 23px;
-  font-weight: 500;
   line-height: 1.1;
-
   text-align: center;
 }
 
@@ -387,83 +294,58 @@ a {
 
 .award-placeholder.royal img {
   height: 90px;
-
   object-fit: contain;
 }
 
-/* =========================================
-   ABOUT
-========================================= */
+/* ABOUT */
 
 .about {
   position: relative;
-
   min-height: 755px;
-
   display: flex;
   align-items: center;
-
   color: #fff;
-
-  background:
-    url("/assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg")
-    center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .about::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background: rgba(8, 33, 43, 0.68);
 }
 
 .about-inner {
   position: relative;
-
   z-index: 1;
-
   width: min(1060px, calc(100% - 60px));
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 340px 1fr;
-
   gap: 42px;
-
   align-items: center;
 }
 
 .about-photo {
   height: 515px;
-
   overflow: hidden;
-
   background: #fff;
 }
 
 .about-photo img {
-  width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .about-copy h2 {
   margin: 0;
-
   font-family: var(--serif);
   font-size: 47px;
-  font-weight: 500;
-  line-height: 1;
 }
 
 .about-copy h3 {
   margin: 13px 0 20px;
-
   font-family: var(--serif);
   font-size: 28px;
   font-weight: 400;
@@ -471,46 +353,29 @@ a {
 
 .about-copy p {
   margin: 0 0 22px;
-
-  color: rgba(255, 255, 255, 0.93);
-
+  color: rgba(255,255,255,.93);
   font-size: 13px;
-  line-height: 1.65;
 }
 
-.about-copy .btn {
-  margin-top: 14px;
-}
-
-/* =========================================
-   QUOTE
-========================================= */
+/* QUOTE */
 
 .quote {
   padding: 95px 20px 105px;
-
   background: var(--navy);
-
   color: #fff;
-
   text-align: center;
 }
 
 .quote-mark {
-  margin-bottom: 18px;
-
   color: var(--brown);
-
   font-family: Georgia, serif;
   font-size: 75px;
-  line-height: 0.6;
+  line-height: .6;
 }
 
 .quote p {
-  width: min(630px, 100%);
-
-  margin: 0 auto;
-
+  width: min(630px,100%);
+  margin: 20px auto 0;
   font-family: var(--serif);
   font-size: 36px;
   line-height: 1.5;
@@ -518,75 +383,54 @@ a {
 
 .quote .welcome {
   margin-top: 30px;
-
   font-size: 27px;
   font-style: italic;
 }
 
-/* =========================================
-   FEATURED PROPERTIES
-========================================= */
+/* FEATURED */
 
 .featured {
   padding: 75px 0 20px;
-
   background: #fff;
 }
 
 .section-title {
   margin: 0 0 22px;
-
+  text-align: center;
   font-family: var(--serif);
   font-size: 48px;
   font-weight: 400;
-
-  text-align: center;
 }
 
-.section-title em {
-  font-weight: 400;
-}
-
-.feature-hero {
+.feature-hero,
+.feature-info,
+.property-grid {
   width: min(1050px, calc(100% - 48px));
-
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-image {
   height: 635px;
-
   overflow: hidden;
 }
 
 .feature-image img {
-  width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
 .feature-info {
-  width: min(1050px, calc(100% - 48px));
-
-  margin: 0 auto 34px;
-
+  margin-bottom: 34px;
   background: #fff;
-
-  box-shadow: 0 11px 26px rgba(0, 0, 0, 0.07);
-
   text-align: center;
+  box-shadow: 0 11px 26px rgba(0,0,0,.07);
 }
 
 .statusbar {
   padding: 11px;
-
   background: var(--navy);
-
   color: #fff;
-
-  font-size: 13px;
-
   text-align: center;
   text-transform: uppercase;
 }
@@ -598,396 +442,248 @@ a {
 .feature-body h3,
 .property h3 {
   margin: 0;
-
   font-family: var(--serif);
   font-size: 26px;
   font-weight: 400;
 }
 
-.feature-body .place,
-.property .place {
+.place {
   color: #757575;
-
   font-family: var(--serif);
   font-size: 19px;
 }
 
-.feature-body .price,
-.property .price {
-  margin-top: 3px;
-
+.price {
   font-family: var(--serif);
   font-size: 25px;
 }
 
-.feature-body .mls,
-.property .mls {
-  margin-top: 4px;
-
-  font-size: 11px;
-}
-
+.mls,
 .courtesy {
-  margin-top: 6px;
-
   font-size: 11px;
 }
 
 .property-grid {
-  width: min(1050px, calc(100% - 48px));
-
-  margin: 0 auto;
-
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3,1fr);
   gap: 18px;
 }
 
 .property {
-  background: #fff;
-
-  box-shadow: 0 9px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 9px 25px rgba(0,0,0,.06);
 }
 
 .property img {
   height: 255px;
-
   object-fit: cover;
 }
 
 .property-body {
   padding: 22px 15px 28px;
-
   text-align: center;
 }
 
 .featured-actions {
   padding: 40px 0 68px;
-
   text-align: center;
 }
 
-/* =========================================
-   NOVA SCOTIA
-========================================= */
+/* NOVA */
 
 .nova {
   position: relative;
-
   min-height: 760px;
-
   color: #fff;
-
-  background:
-    url("/assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg")
-    center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .nova::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      0deg,
-      rgba(8, 24, 30, 0.75),
-      rgba(8, 24, 30, 0.03) 65%
-    );
+  background: linear-gradient(
+    0deg,
+    rgba(8,24,30,.75),
+    rgba(8,24,30,.03) 65%
+  );
 }
 
 .nova-copy {
   position: absolute;
-
   z-index: 2;
-
   left: 50%;
   bottom: 90px;
-
-  width: min(610px, 80%);
-
+  width: min(610px,80%);
   transform: translateX(-50%);
 }
 
 .nova-copy .kicker {
-  margin-bottom: 10px;
-
   font-family: var(--serif);
   font-size: 44px;
-  line-height: 1;
-
-  text-transform: uppercase;
 }
 
 .nova-copy h2 {
   margin: 0 0 14px;
-
   font-family: var(--serif);
   font-size: 27px;
   font-weight: 400;
 }
 
-.nova-copy p {
-  margin: 0 0 22px;
-
-  font-size: 13px;
-  line-height: 1.65;
-}
-
-/* =========================================
-   COMMUNITIES
-========================================= */
+/* COMMUNITIES */
 
 .communities {
   padding: 65px 0 52px;
-
   background: #fff;
 }
 
-.communities h2 {
+.communities h2,
+.market h2 {
   margin: 0 0 35px;
-
+  text-align: center;
   font-family: var(--serif);
   font-size: 49px;
-  font-weight: 400;
-
-  text-align: center;
-}
-
-.communities h2 em {
   font-weight: 400;
 }
 
 .community-grid {
-  width: min(1030px, calc(100% - 48px));
-
+  width: min(1030px,calc(100% - 48px));
   margin: auto;
-
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3,1fr);
   gap: 24px 10px;
 }
 
 .community-card img {
   height: 225px;
-
   object-fit: cover;
 }
 
 .community-card h3 {
   margin: 18px 0 0;
-
+  text-align: center;
   font-family: var(--serif);
   font-size: 24px;
   font-weight: 400;
-
-  text-align: center;
 }
 
-.communities .action {
+.action {
   margin-top: 45px;
-
   text-align: center;
 }
 
-/* =========================================
-   MARKET
-========================================= */
+/* MARKET */
 
 .market {
   padding: 65px 0 66px;
-
   background: var(--navy);
-
   color: #fff;
 }
 
-.market h2 {
-  margin: 0 0 47px;
-
-  font-family: var(--serif);
-  font-size: 49px;
-  font-weight: 400;
-
-  text-align: center;
-}
-
-.market h2 em {
-  font-weight: 400;
-}
-
 .market-grid {
-  width: min(1000px, calc(100% - 48px));
-
+  width: min(1000px,calc(100% - 48px));
   margin: auto;
-
   display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
+  grid-template-columns: repeat(3,1fr);
   gap: 18px;
 }
 
 .market-card img {
   height: 240px;
-
   object-fit: cover;
 }
 
 .market-card h3 {
   margin: 16px 12px 0;
-
+  text-align: center;
   font-family: var(--serif);
   font-size: 22px;
   font-weight: 400;
   line-height: 1.15;
-
-  text-align: center;
 }
 
-.market .action {
-  margin-top: 35px;
-
-  text-align: center;
-}
-
-/* =========================================
-   FRIENDLY FACE CTA
-========================================= */
+/* CTA */
 
 .cta {
   position: relative;
-
   min-height: 610px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
-
   color: #fff;
-
   text-align: center;
-
-  background:
-    url("/assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg")
-    center / cover no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .cta::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
-  z-index: 0;
-
-  background: rgba(17, 45, 64, 0.38);
+  background: rgba(17,45,64,.38);
 }
 
 .cta-inner {
   position: relative;
-
   z-index: 1;
-
-  width: min(840px, 88%);
+  width: min(840px,88%);
 }
 
 .cta-knot {
   width: 76px;
-
   margin: 0 auto 28px;
-
   filter: brightness(0) invert(1);
 }
 
 .cta h2 {
   margin: 0;
-
   font-family: var(--serif);
   font-size: 48px;
-  font-weight: 400;
-  line-height: 1.15;
-}
-
-.cta h2 em {
   font-weight: 400;
 }
 
 .cta p {
-  width: min(650px, 100%);
-
+  width: min(650px,100%);
   margin: 22px auto 28px;
-
-  font-size: 13px;
 }
 
-.cta .btn {
-  background: #fff;
-  border-color: #fff;
-
-  color: var(--navy);
-}
-
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 .footer {
   padding: 48px 20px 34px;
-
   background: var(--navy);
-
   color: #fff;
-
   text-align: center;
 }
 
 .footer .ks-white {
   width: 260px;
-
   margin: 0 auto 30px;
-
-  object-fit: contain;
 }
 
 .footer .contact {
   font-size: 12px;
-  line-height: 1.8;
 }
 
 .social {
-  margin: 36px 0 33px;
-
   display: flex;
   justify-content: center;
-
   gap: 23px;
-
+  margin: 36px 0 33px;
   font-size: 28px;
 }
 
 .footer .royal-white {
   width: 190px;
-
   margin: 0 auto 42px;
-
-  object-fit: contain;
 }
 
 .footer-rule {
-  width: min(950px, 90%);
+  width: min(950px,90%);
   height: 1px;
-
   margin: auto;
-
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255,255,255,.38);
 }
 
 .newsletter {
@@ -995,81 +691,27 @@ a {
 }
 
 .newsletter h3 {
-  margin: 0 0 10px;
-
   font-family: var(--serif);
   font-size: 24px;
   font-weight: 400;
 }
 
-.newsletter p {
-  margin: 0;
-
-  font-size: 12px;
-}
-
 .footer-bottom {
-  margin-top: 20px;
-
   font-size: 10px;
-  letter-spacing: 0.08em;
-
-  opacity: 0.66;
+  opacity: .66;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* MOBILE */
 
-@media (max-width: 980px) {
-  :root {
-    --header-h: 82px;
-  }
+@media(max-width:760px) {
 
-  .brand-group {
-    min-width: 0;
-  }
-
-  .ks-brand {
-    width: 120px;
+  .site-header,
+  .site-header.over-hero {
+    background: #fff;
+    color: var(--navy);
   }
 
   .royal-brand {
-    width: 160px;
-  }
-
-  .nav {
-    gap: 18px;
-  }
-
-  .nav a {
-    font-size: 9px;
-  }
-
-  .about-inner {
-    grid-template-columns: 280px 1fr;
-  }
-
-  .about-photo {
-    height: 450px;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 760px) {
-  .site-header,
-  .site-header.over-hero {
-    background: rgba(255, 255, 255, 0.98);
-
-    color: var(--navy);
-
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  }
-
-  .brand-group .royal-brand {
     display: none;
   }
 
@@ -1102,42 +744,12 @@ a {
     font-size: 48px;
   }
 
-  .intro {
-    padding: 70px 24px;
-  }
-
-  .intro h2 {
-    font-size: 39px;
-  }
-
-  .intro .lead {
-    font-size: 22px;
-  }
-
-  .award-row {
-    flex-wrap: wrap;
-
-    gap: 25px;
-  }
-
   .about {
     padding: 70px 0;
-
-    min-height: 0;
   }
 
   .about-inner {
-    width: min(620px, calc(100% - 40px));
-
     grid-template-columns: 1fr;
-  }
-
-  .about-photo {
-    height: 520px;
-  }
-
-  .quote p {
-    font-size: 30px;
   }
 
   .property-grid,
@@ -1155,33 +767,14 @@ a {
   .community-card img,
   .market-card img {
     height: auto;
-
-    aspect-ratio: 16 / 10;
-
+    aspect-ratio: 16/10;
     object-fit: cover;
-  }
-
-  .nova {
-    min-height: 650px;
   }
 
   .nova-copy {
     left: 28px;
-    bottom: 50px;
-
     width: calc(100% - 56px);
-
     transform: none;
-  }
-
-  .nova-copy .kicker {
-    font-size: 38px;
-  }
-
-  .cta {
-    min-height: 560px;
-
-    background-position: center;
   }
 
   .cta h2 {
