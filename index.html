@@ -2,178 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kevin Scott Real Estate Team | Nova Scotia Real Estate</title>
-  <meta name="description" content="Kevin Scott Real Estate Team — thoughtful, local real estate guidance across Nova Scotia.">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kevin Scott Real Estate Team | Nova Scotia</title>
+  <meta name="description" content="Kevin Scott Real Estate Team — Nova Scotia real estate.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --navy:#102733;
-      --navy-2:#173542;
-      --ocean:#447382;
-      --ocean-soft:#6f929b;
-      --mist:#dfe7e4;
-      --sand:#eee9df;
-      --cream:#f6f3ec;
-      --paper:#fbfaf7;
-      --white:#ffffff;
-      --ink:#102733;
-      --muted:#65737a;
-      --line:rgba(16,39,51,.18);
-
-      --serif:"Libre Caslon Display", Georgia, "Times New Roman", serif;
-      --sans:"DM Sans", Arial, Helvetica, sans-serif;
-
-      --gutter:clamp(22px,4.6vw,74px);
-      --max:1500px;
+      --navy:#17385e;
+      --navy-deep:#14365c;
+      --brown:#7d3f20;
+      --paper:#fffdf9;
+      --cream:#f6f2eb;
+      --ink:#1f2328;
+      --line:#d7d1c8;
+      --sans:"Montserrat",Arial,sans-serif;
+      --serif:"Cormorant Garamond",Georgia,serif;
+      --header-h:94px;
+      --max:1050px;
     }
 
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       background:var(--paper);
       color:var(--ink);
       font-family:var(--sans);
-      font-size:16px;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+      font-size:14px;
+      line-height:1.65;
     }
 
-    body.menu-open{overflow:hidden}
-
-    img,video{display:block;max-width:100%}
-    img{width:100%;height:100%;object-fit:cover}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .wrap{width:min(var(--max),100%);margin-inline:auto}
-    .serif{font-family:var(--serif)}
-    .eyebrow{
-      margin:0 0 14px;
-      font-size:.67rem;
-      font-weight:600;
-      letter-spacing:.21em;
-      text-transform:uppercase;
+    img,video{
+      display:block;
+      width:100%;
     }
-    .display{
-      margin:0;
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(var(--max),calc(100% - 48px));
+      margin:auto;
+    }
+
+    .serif{
       font-family:var(--serif);
-      font-weight:400;
-      line-height:.93;
-      letter-spacing:-.035em;
     }
-    .button{
+
+    .btn{
       display:inline-flex;
       align-items:center;
-      gap:18px;
-      min-height:44px;
-      padding:11px 18px 10px;
+      gap:16px;
+      min-height:46px;
+      padding:0 24px;
       border:1px solid currentColor;
-      background:transparent;
-      color:inherit;
-      font-size:.67rem;
-      font-weight:500;
-      letter-spacing:.15em;
+      font-size:11px;
+      letter-spacing:.08em;
       text-transform:uppercase;
-      transition:background .25s ease,color .25s ease,border-color .25s ease;
+      background:transparent;
+      transition:.2s ease;
     }
-    .button::after{content:"→";font-size:1rem;line-height:1}
-    .button:hover{background:var(--navy);border-color:var(--navy);color:#fff}
-    .button.light:hover{background:#fff;border-color:#fff;color:var(--navy)}
 
-    /* Header */
+    .btn::after{
+      content:"→";
+      font-size:16px;
+    }
+
+    .btn.brown{
+      background:var(--brown);
+      border-color:var(--brown);
+      color:#fff;
+    }
+
+    .btn:hover{
+      opacity:.8;
+    }
+
+    /* HEADER */
+
     .site-header{
       position:fixed;
-      inset:0 0 auto 0;
-      z-index:50;
-      color:#fff;
-      padding:20px var(--gutter) 0;
-      transition:background .28s ease, color .28s ease, padding .28s ease, box-shadow .28s ease;
-    }
-    .site-header.scrolled{
-      background:rgba(16,39,51,.96);
-      color:#fff;
-      padding-top:0;
-      box-shadow:0 1px 0 rgba(16,39,51,.10);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-    }
-    .nav{
-      display:grid;
-      grid-template-columns:1fr auto 1fr;
-      align-items:center;
-      gap:28px;
-      min-height:91px;
-      border-bottom:1px solid rgba(255,255,255,.42);
-      transition:min-height .28s ease,border-color .28s ease;
-    }
-    .nav-side{
+      top:0;
+      left:0;
+      right:0;
+      z-index:100;
+      height:var(--header-h);
       display:flex;
       align-items:center;
-      gap:clamp(18px,2.4vw,38px);
-      font-size:.65rem;
-      font-weight:500;
-      letter-spacing:.13em;
-      text-transform:uppercase;
-    }
-    .nav-side.right{justify-content:flex-end}
-    .nav-side a{position:relative;padding:8px 0}
-    .nav-side a::after{
-      content:"";
-      position:absolute;
-      left:0;right:100%;bottom:2px;height:1px;
-      background:currentColor;
-      transition:right .22s ease;
-    }
-    .nav-side a:hover::after{right:0}
-    .header-logo{
-      width:clamp(160px,15vw,235px);
-      justify-self:center;
-    }
-    .header-logo img{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      filter:none;
-    }
-    .site-header.scrolled .nav{
-      min-height:74px;
-      border-bottom-color:transparent;
-    }
-    .site-header.scrolled .menu-button{
-      color:#fff;
-    }
-    .menu-button{
-      display:none;
-      justify-self:end;
-      width:42px;height:42px;
-      padding:0;
-      border:0;
-      background:transparent;
-      color:#fff;
-      cursor:pointer;
-    }
-    .menu-button span{
-      display:block;
-      width:24px;height:1px;
-      margin:6px auto;
-      background:currentColor;
+      background:rgba(255,255,255,.97);
+      color:var(--navy);
+      transition:.25s ease;
+      box-shadow:0 1px 0 rgba(0,0,0,.05);
     }
 
-    /* Hero */
+    .site-header.over-hero{
+      background:transparent;
+      color:#fff;
+      box-shadow:none;
+    }
+
+    .header-inner{
+      width:100%;
+      padding:0 28px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand-group{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      min-width:330px;
+    }
+
+    .ks-brand{
+      width:132px;
+      height:48px;
+      object-fit:contain;
+    }
+
+    .royal-brand{
+      width:190px;
+      height:44px;
+      object-fit:contain;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:30px;
+      white-space:nowrap;
+    }
+
+    .nav a{
+      font-size:10px;
+      letter-spacing:.015em;
+      text-transform:uppercase;
+      font-weight:400;
+    }
+
+    .nav a:hover{
+      opacity:.62;
+    }
+
+    .menu-toggle{
+      display:none;
+      border:0;
+      background:none;
+      color:inherit;
+      font-size:26px;
+    }
+
+    /* HERO */
+
     .hero{
       position:relative;
-      min-height:100svh;
+      height:100vh;
+      min-height:720px;
       overflow:hidden;
-      background:#30434a;
-      color:#fff;
+      background:#557183;
     }
-    .hero-video,
+
+    .hero video,
     .hero-poster{
       position:absolute;
       inset:0;
@@ -181,952 +182,1426 @@
       height:100%;
       object-fit:cover;
     }
+
     .hero-poster{
       background:url("assets/hero-coast-poster.jpg") center/cover no-repeat;
     }
-    .hero-video{z-index:1}
-    .hero-shade{
+
+    .hero video{
+      z-index:1;
+    }
+
+    .hero::after{
+      content:"";
       position:absolute;
       inset:0;
       z-index:2;
-      background:
-        linear-gradient(90deg,rgba(7,25,34,.48) 0%,rgba(7,25,34,.12) 48%,rgba(7,25,34,.12) 100%),
-        linear-gradient(0deg,rgba(7,25,34,.56) 0%,rgba(7,25,34,.04) 54%,rgba(7,25,34,.20) 100%);
+      background:rgba(12,43,62,.14);
     }
-    .hero-inner{
-      position:relative;
+
+    .hero-content{
+      position:absolute;
+      inset:0;
       z-index:3;
-      min-height:100svh;
       display:flex;
-      align-items:flex-end;
-      padding:180px var(--gutter) clamp(48px,6vw,88px);
-    }
-    .hero-copy{width:min(100%,980px)}
-    .hero .eyebrow{color:rgba(255,255,255,.93)}
-    .hero h1{
-      max-width:1000px;
-      font-size:clamp(4rem,8.8vw,9.7rem);
-      color:#fff;
-    }
-    .hero h1 span{
-      display:block;
-      padding-left:clamp(22px,7vw,125px);
-      font-style:italic;
-    }
-    .hero-lower{
-      display:flex;
-      align-items:flex-end;
-      gap:50px;
-      margin-top:30px;
-    }
-    .hero-lower p{
-      max-width:520px;
-      margin:0;
-      font-size:clamp(.9rem,1.1vw,1.03rem);
-      line-height:1.65;
-      color:rgba(255,255,255,.91);
-    }
-    .hero-scroll{
-      margin-left:auto;
-      padding-left:16px;
-      border-left:1px solid rgba(255,255,255,.45);
-      writing-mode:vertical-rl;
-      font-size:.61rem;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      opacity:.85;
-    }
-
-    /* Statement */
-    .statement{
-      background:var(--sand);
-      padding:clamp(90px,10vw,158px) var(--gutter) clamp(100px,11vw,175px);
-    }
-    .statement-grid{
-      display:grid;
-      grid-template-columns:minmax(180px,.7fr) minmax(0,2fr);
-      gap:7vw;
-      align-items:start;
-    }
-    .statement h2{
-      max-width:970px;
-      font-size:clamp(3.7rem,7.6vw,8.2rem);
-    }
-    .statement h2 span{
-      display:block;
-      padding-left:clamp(30px,8vw,145px);
-      font-style:italic;
-    }
-
-    /* Story */
-    .story{
-      background:var(--paper);
-      padding:clamp(90px,10vw,160px) var(--gutter);
-    }
-    .story-grid{
-      display:grid;
-      grid-template-columns:1.03fr .97fr;
-      gap:clamp(48px,8vw,130px);
       align-items:center;
-    }
-    .story-collage{
-      position:relative;
-      padding:0 10% 10% 0;
-    }
-    .story-main{
-      aspect-ratio:4/5;
-      overflow:hidden;
-      background:#ccd7d4;
-    }
-    .story-main img{object-position:center}
-    .story-inset{
-      position:absolute;
-      right:0;
-      bottom:0;
-      width:46%;
-      aspect-ratio:1.18/1;
-      border:10px solid var(--paper);
-      overflow:hidden;
-      background:#ccd7d4;
-    }
-    .story-copy h2{
-      margin-bottom:18px;
-      font-size:clamp(4rem,6.9vw,7.5rem);
-    }
-    .story-copy h2 span{
-      display:block;
-      padding-left:9%;
-      font-style:italic;
-    }
-    .story-copy .sub{
-      margin:0 0 25px;
-      font-size:.67rem;
-      font-weight:600;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-    }
-    .story-copy p{
-      max-width:590px;
-      margin:0 0 18px;
-      color:#344950;
-      font-size:.98rem;
-    }
-    .story-copy .button{margin-top:8px}
-    .story-quote{
-      max-width:610px;
-      margin-top:37px;
-      padding-top:28px;
-      border-top:1px solid var(--line);
-      font-family:var(--serif);
-      font-size:clamp(1.75rem,2.5vw,2.55rem);
-      line-height:1.17;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      padding-top:35px;
     }
 
-    /* Listings */
-    .properties{
-      background:var(--navy);
-      color:#fff;
-      padding:clamp(88px,9vw,145px) 0 clamp(70px,8vw,112px);
-      overflow:hidden;
+    .hero-title{
+      font-family:var(--serif);
+      font-size:47px;
+      line-height:1.08;
+      font-weight:400;
+      text-shadow:0 1px 2px rgba(0,0,0,.12);
     }
-    .properties-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:35px;
-      padding:0 var(--gutter);
-      margin-bottom:44px;
-    }
-    .properties-head h2{
-      font-size:clamp(4.4rem,8vw,8.4rem);
-    }
-    .properties-head h2 span{
+
+    .hero-title .team{
       display:block;
-      padding-left:23%;
+      font-size:45px;
+    }
+
+    .hero-title .trusted{
+      display:block;
+      font-size:56px;
+      margin-top:7px;
+    }
+
+    .hero-title .from{
+      display:block;
       font-style:italic;
+      font-size:58px;
+      margin-top:-4px;
     }
-    .properties-track{
-      display:grid;
-      grid-auto-flow:column;
-      grid-auto-columns:minmax(330px,1fr);
-      grid-template-columns:repeat(4,minmax(330px,1fr));
-      gap:14px;
-      overflow-x:auto;
-      overscroll-behavior-inline:contain;
-      scroll-snap-type:x mandatory;
-      scrollbar-width:none;
-      padding:0 var(--gutter) 20px;
-    }
-    .properties-track::-webkit-scrollbar{display:none}
-    .property{
-      min-width:0;
-      scroll-snap-align:start;
+
+    /* INTRO */
+
+    .intro{
+      padding:86px 24px 78px;
+      text-align:center;
       background:#fff;
-      color:var(--navy);
-    }
-    .property-image{
-      aspect-ratio:4/3;
-      overflow:hidden;
-      background:#ccd7d4;
-    }
-    .property-image img{
-      transition:transform .5s ease;
-    }
-    .property:hover .property-image img{transform:scale(1.025)}
-    .property-body{padding:21px 22px 25px}
-    .property-status{
-      margin-bottom:12px;
-      color:var(--ocean);
-      font-size:.61rem;
-      font-weight:600;
-      letter-spacing:.17em;
-      text-transform:uppercase;
-    }
-    .property h3{
-      margin:0 0 4px;
-      font-family:var(--serif);
-      font-size:1.55rem;
-      font-weight:400;
-      line-height:1.08;
-    }
-    .property-place{
-      margin-bottom:15px;
-      color:#718087;
-      font-size:.78rem;
-    }
-    .property-price{
-      font-family:var(--serif);
-      font-size:1.92rem;
-      line-height:1.15;
-    }
-    .property-mls{
-      margin-top:5px;
-      color:#7c898e;
-      font-size:.64rem;
-    }
-    .properties-foot{
-      padding:23px var(--gutter) 0;
-      text-align:center;
     }
 
-    /* Coastal */
-    .coastal{
-      display:grid;
-      grid-template-columns:1.13fr .87fr;
-      min-height:760px;
-      background:var(--sand);
-    }
-    .coastal-image{
-      min-height:620px;
-      background:url("assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg") center/cover no-repeat;
-    }
-    .coastal-copy{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      padding:clamp(70px,8vw,130px) var(--gutter);
-    }
-    .coastal-copy h2{
-      margin:10px 0 28px;
-      font-size:clamp(3.5rem,5.7vw,6.3rem);
-    }
-    .coastal-copy h2 span{font-style:italic}
-    .coastal-copy p{
-      max-width:550px;
-      margin:0 0 27px;
-      color:#344950;
-    }
-
-    /* Communities */
-    .communities{
-      background:var(--paper);
-      padding:clamp(95px,10vw,160px) var(--gutter);
-    }
-    .communities-head{
-      display:grid;
-      grid-template-columns:.7fr 1.3fr;
-      gap:6vw;
-      align-items:end;
-      margin-bottom:52px;
-    }
-    .communities-head h2{
-      font-size:clamp(4.1rem,7.6vw,8rem);
-    }
-    .communities-head h2 span{
-      display:block;
-      padding-left:14%;
-      font-style:italic;
-    }
-    .community-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      border-top:1px solid var(--line);
-      border-left:1px solid var(--line);
-    }
-    .community{
-      position:relative;
-      min-height:305px;
-      display:flex;
-      align-items:flex-end;
-      overflow:hidden;
-      border-right:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      padding:23px;
-      background:#f7f6f1;
-    }
-    .community .photo,
-    .community .shade{
-      position:absolute;
-      inset:0;
-      opacity:0;
-      transition:opacity .35s ease, transform .45s ease;
-    }
-    .community .photo{
-      background:center/cover no-repeat;
-      transform:scale(1.035);
-    }
-    .community .shade{
-      background:linear-gradient(0deg,rgba(6,24,33,.63),rgba(6,24,33,.05) 68%);
-    }
-    .community h3{
-      position:relative;
-      z-index:2;
+    .intro h2{
       margin:0;
+      color:var(--brown);
       font-family:var(--serif);
-      font-size:1.72rem;
       font-weight:400;
-      line-height:1.08;
-      transition:color .3s ease;
+      font-size:47px;
+      line-height:1.1;
     }
-    .community:hover .photo,
-    .community:hover .shade{opacity:1}
-    .community:hover .photo{transform:scale(1)}
-    .community:hover h3{color:#fff}
-    .communities .button{margin-top:34px}
 
-    /* Editorial / Market */
-    .market{
-      background:var(--mist);
-      padding:clamp(95px,10vw,155px) var(--gutter);
+    .intro h2 em{
+      font-weight:400;
     }
-    .market-title{
-      margin-bottom:54px;
-      font-size:clamp(4.7rem,8.8vw,9rem);
-    }
-    .market-title span:nth-child(2){
-      display:block;
-      padding-left:13%;
-    }
-    .market-title span:nth-child(3){
-      display:block;
-      padding-left:29%;
-      font-style:italic;
-    }
-    .posts{
-      display:grid;
-      grid-template-columns:1.18fr 1fr 1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .post-image{
-      overflow:hidden;
-      aspect-ratio:4/3;
-      background:#c8d4d2;
-    }
-    .post:first-child .post-image{aspect-ratio:4/5}
-    .post-image img{transition:transform .45s ease}
-    .post:hover .post-image img{transform:scale(1.025)}
-    .post-meta{
-      margin-top:17px;
-      color:#5a6b70;
-      font-size:.61rem;
-      font-weight:600;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-    .post h3{
-      margin:7px 0 0;
+
+    .intro .lead{
+      width:min(760px,100%);
+      margin:23px auto 0;
       font-family:var(--serif);
-      font-size:clamp(1.65rem,2.35vw,2.55rem);
-      font-weight:400;
-      line-height:1.08;
+      font-size:25px;
+      line-height:1.45;
     }
-    .market .button{margin-top:43px}
 
-    /* CTA */
-    .cta{
-      position:relative;
-      overflow:hidden;
-      background:var(--cream);
-      padding:clamp(100px,11vw,175px) var(--gutter);
-      text-align:center;
-    }
-    .cta-mark{
-      width:78px;
-      height:78px;
-      margin:0 auto 28px;
-      object-fit:contain;
-    }
-    .cta h2{
-      max-width:1180px;
-      margin:0 auto;
-      font-size:clamp(3.9rem,7.5vw,8rem);
-    }
-    .cta h2 span{
-      display:block;
+    .intro .script{
+      margin-top:18px;
+      color:var(--navy);
+      font-family:var(--serif);
       font-style:italic;
-    }
-    .cta p{
-      max-width:690px;
-      margin:28px auto 30px;
-      color:#42545a;
+      font-size:26px;
     }
 
-    /* Footer */
-    footer{
-      background:var(--navy);
-      color:#fff;
-      padding:68px var(--gutter) 26px;
-    }
-    .footer-main{
-      display:grid;
-      grid-template-columns:1.1fr .72fr .86fr;
-      gap:55px;
-      padding-bottom:57px;
-    }
-    .footer-logo{
-      width:min(300px,85%);
-      height:auto;
-      object-fit:contain;
-    }
-    .footer-royal{
-      width:165px;
-      height:auto;
-      object-fit:contain;
-      margin-top:26px;
-      opacity:.96;
-    }
-    .footer-heading{
-      margin-bottom:14px;
-      color:#b9c7cb;
-      font-size:.63rem;
-      font-weight:600;
-      letter-spacing:.17em;
-      text-transform:uppercase;
-    }
-    footer p,footer a{
-      color:rgba(255,255,255,.87);
-      font-size:.82rem;
-      line-height:1.7;
-    }
-    footer p{margin:0 0 18px}
-    .footer-links{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:6px 26px;
-    }
-    .footer-bottom{
-      display:flex;
-      justify-content:space-between;
-      gap:30px;
-      padding-top:20px;
-      border-top:1px solid rgba(255,255,255,.22);
-      color:rgba(255,255,255,.52);
-      font-size:.58rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
+    .intro-rule{
+      width:min(1060px,calc(100% - 50px));
+      height:1px;
+      background:#ded9d2;
+      margin:60px auto 0;
     }
 
-    /* Mobile menu */
-    .mobile-menu{
-      position:fixed;
-      inset:0;
-      z-index:100;
-      display:flex;
-      flex-direction:column;
-      padding:25px;
-      background:var(--navy);
-      color:#fff;
-      transform:translateY(-100%);
-      transition:transform .32s ease;
+    .awards{
+      padding-top:27px;
     }
-    .mobile-menu.open{transform:translateY(0)}
-    .mobile-menu-top{
+
+    .awards h3{
+      font-family:var(--serif);
+      font-size:28px;
+      letter-spacing:.18em;
+      font-weight:500;
+      margin:0 0 46px;
+    }
+
+    .award-row{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:90px;
+    }
+
+    .award-placeholder{
+      width:170px;
+      height:115px;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      padding-bottom:18px;
-      border-bottom:1px solid rgba(255,255,255,.25);
-    }
-    .mobile-menu-logo{width:175px;height:auto}
-    .mobile-close{
-      width:40px;height:40px;
-      border:0;background:none;color:#fff;
-      font-size:2rem;line-height:1;cursor:pointer;
-    }
-    .mobile-links{
-      display:flex;
-      flex-direction:column;
       justify-content:center;
-      gap:16px;
-      flex:1;
+      font-weight:500;
+      color:#111;
+      font-size:23px;
+      line-height:1.1;
+      text-align:center;
     }
-    .mobile-links a{
+
+    .award-placeholder.royal{
+      width:220px;
+    }
+
+    .award-placeholder.royal img{
+      height:90px;
+      object-fit:contain;
+    }
+
+    /* ABOUT */
+
+    .about{
+      position:relative;
+      min-height:755px;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      background:url("assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg") center/cover no-repeat;
+    }
+
+    .about::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(8,33,43,.68);
+    }
+
+    .about-inner{
+      position:relative;
+      z-index:1;
+      width:min(1060px,calc(100% - 60px));
+      margin:auto;
+      display:grid;
+      grid-template-columns:340px 1fr;
+      gap:42px;
+      align-items:center;
+    }
+
+    .about-photo{
+      height:515px;
+      overflow:hidden;
+      background:#fff;
+    }
+
+    .about-photo img{
+      height:100%;
+      object-fit:cover;
+    }
+
+    .about-copy h2{
       font-family:var(--serif);
-      font-size:clamp(2.2rem,11vw,4rem);
+      font-size:47px;
+      font-weight:500;
+      margin:0;
       line-height:1;
     }
 
-    @media (max-width:1100px){
-      .nav-side{gap:18px}
-      .story-grid{gap:55px}
-      .community{min-height:270px}
+    .about-copy h3{
+      font-family:var(--serif);
+      font-size:28px;
+      font-weight:400;
+      margin:13px 0 20px;
     }
 
-    @media (max-width:960px){
-      .nav{grid-template-columns:1fr auto}
-      .nav-side{display:none}
-      .header-logo{justify-self:start}
-      .menu-button{display:block}
+    .about-copy p{
+      font-size:13px;
+      line-height:1.65;
+      margin:0 0 22px;
+      color:rgba(255,255,255,.93);
+    }
 
-      .statement-grid,
-      .story-grid,
-      .coastal,
-      .communities-head{
+    .about-copy .btn{
+      margin-top:14px;
+    }
+
+    /* QUOTE */
+
+    .quote{
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+      padding:95px 20px 105px;
+    }
+
+    .quote-mark{
+      font-family:Georgia,serif;
+      color:var(--brown);
+      font-size:75px;
+      line-height:.6;
+      margin-bottom:18px;
+    }
+
+    .quote p{
+      width:min(630px,100%);
+      margin:0 auto;
+      font-family:var(--serif);
+      font-size:36px;
+      line-height:1.5;
+    }
+
+    .quote .welcome{
+      margin-top:30px;
+      font-style:italic;
+      font-size:27px;
+    }
+
+    /* FEATURED */
+
+    .featured{
+      background:#fff;
+      padding:75px 0 20px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-family:var(--serif);
+      font-size:48px;
+      font-weight:400;
+      margin:0 0 22px;
+    }
+
+    .section-title em{
+      font-weight:400;
+    }
+
+    .feature-hero{
+      width:min(1050px,calc(100% - 48px));
+      margin:auto;
+    }
+
+    .feature-image{
+      height:635px;
+      overflow:hidden;
+    }
+
+    .feature-image img{
+      height:100%;
+      object-fit:cover;
+    }
+
+    .feature-info{
+      width:min(1050px,calc(100% - 48px));
+      margin:0 auto 34px;
+      text-align:center;
+      box-shadow:0 11px 26px rgba(0,0,0,.07);
+      background:#fff;
+    }
+
+    .statusbar{
+      background:var(--navy);
+      color:#fff;
+      padding:11px;
+      font-size:13px;
+      text-transform:uppercase;
+    }
+
+    .feature-body{
+      padding:25px 20px 35px;
+    }
+
+    .feature-body h3,
+    .property h3{
+      font-family:var(--serif);
+      font-size:26px;
+      font-weight:400;
+      margin:0;
+    }
+
+    .feature-body .place,
+    .property .place{
+      font-family:var(--serif);
+      font-size:19px;
+      color:#757575;
+    }
+
+    .feature-body .price,
+    .property .price{
+      font-family:var(--serif);
+      font-size:25px;
+      margin-top:3px;
+    }
+
+    .feature-body .mls,
+    .property .mls{
+      font-size:11px;
+      margin-top:4px;
+    }
+
+    .courtesy{
+      font-size:11px;
+      margin-top:6px;
+    }
+
+    .property-grid{
+      width:min(1050px,calc(100% - 48px));
+      margin:0 auto 0;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .property{
+      background:#fff;
+      box-shadow:0 9px 25px rgba(0,0,0,.06);
+    }
+
+    .property img{
+      height:255px;
+      object-fit:cover;
+    }
+
+    .property .statusbar{
+      margin:0;
+      text-align:center;
+    }
+
+    .property-body{
+      text-align:center;
+      padding:22px 15px 28px;
+    }
+
+    .featured-actions{
+      text-align:center;
+      padding:40px 0 68px;
+    }
+
+    /* NOVA SCOTIA */
+
+    .nova{
+      position:relative;
+      min-height:760px;
+      color:#fff;
+      background:url("assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg") center/cover no-repeat;
+    }
+
+    .nova::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(0deg,rgba(8,24,30,.75),rgba(8,24,30,.03) 65%);
+    }
+
+    .nova-copy{
+      position:absolute;
+      z-index:2;
+      left:50%;
+      bottom:90px;
+      transform:translateX(-50%);
+      width:min(610px,80%);
+    }
+
+    .nova-copy .kicker{
+      font-family:var(--serif);
+      font-size:44px;
+      text-transform:uppercase;
+      line-height:1;
+      margin-bottom:10px;
+    }
+
+    .nova-copy h2{
+      font-family:var(--serif);
+      font-size:27px;
+      font-weight:400;
+      margin:0 0 14px;
+    }
+
+    .nova-copy p{
+      margin:0 0 22px;
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    /* COMMUNITIES */
+
+    .communities{
+      background:#fff;
+      padding:65px 0 52px;
+    }
+
+    .communities h2{
+      text-align:center;
+      font-family:var(--serif);
+      font-size:49px;
+      font-weight:400;
+      margin:0 0 35px;
+    }
+
+    .communities h2 em{
+      font-weight:400;
+    }
+
+    .community-grid{
+      width:min(1030px,calc(100% - 48px));
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px 10px;
+    }
+
+    .community-card img{
+      height:225px;
+      object-fit:cover;
+    }
+
+    .community-card h3{
+      font-family:var(--serif);
+      font-size:24px;
+      font-weight:400;
+      text-align:center;
+      margin:18px 0 0;
+    }
+
+    .communities .action{
+      text-align:center;
+      margin-top:45px;
+    }
+
+    /* MARKET */
+
+    .market{
+      background:var(--navy);
+      color:#fff;
+      padding:65px 0 66px;
+    }
+
+    .market h2{
+      text-align:center;
+      font-family:var(--serif);
+      font-size:49px;
+      font-weight:400;
+      margin:0 0 47px;
+    }
+
+    .market h2 em{
+      font-weight:400;
+    }
+
+    .market-grid{
+      width:min(1000px,calc(100% - 48px));
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .market-card img{
+      height:240px;
+      object-fit:cover;
+    }
+
+    .market-card h3{
+      font-family:var(--serif);
+      font-size:22px;
+      font-weight:400;
+      text-align:center;
+      line-height:1.15;
+      margin:16px 12px 0;
+    }
+
+    .market .action{
+      text-align:center;
+      margin-top:35px;
+    }
+
+    /* CTA */
+
+    .cta{
+      position:relative;
+      min-height:610px;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:url("assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg") center/cover no-repeat;
+    }
+
+    .cta::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(24,49,69,.35);
+    }
+
+    .cta-inner{
+      position:relative;
+      z-index:1;
+      width:min(840px,88%);
+    }
+
+    .cta-knot{
+      width:76px;
+      margin:0 auto 28px;
+      filter:brightness(0) invert(1);
+    }
+
+    .cta h2{
+      font-family:var(--serif);
+      font-size:48px;
+      line-height:1.15;
+      font-weight:400;
+      margin:0;
+    }
+
+    .cta h2 em{
+      font-weight:400;
+    }
+
+    .cta p{
+      width:min(650px,100%);
+      margin:22px auto 28px;
+      font-size:13px;
+    }
+
+    .cta .btn{
+      background:#fff;
+      color:#111;
+      border-color:#111;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      background:var(--navy);
+      color:#fff;
+      padding:48px 20px 34px;
+      text-align:center;
+    }
+
+    .footer .ks-white{
+      width:260px;
+      margin:0 auto 30px;
+      object-fit:contain;
+    }
+
+    .footer .contact{
+      font-size:12px;
+      line-height:1.8;
+    }
+
+    .social{
+      display:flex;
+      justify-content:center;
+      gap:23px;
+      margin:36px 0 33px;
+      font-size:28px;
+    }
+
+    .footer .royal-white{
+      width:190px;
+      margin:0 auto 42px;
+      object-fit:contain;
+    }
+
+    .footer-rule{
+      width:min(950px,90%);
+      height:1px;
+      background:rgba(255,255,255,.38);
+      margin:auto;
+    }
+
+    .newsletter{
+      padding:22px 0 20px;
+    }
+
+    .newsletter h3{
+      font-family:var(--serif);
+      font-size:24px;
+      font-weight:400;
+      margin:0 0 10px;
+    }
+
+    .newsletter p{
+      font-size:12px;
+      margin:0;
+    }
+
+    .footer-bottom{
+      margin-top:20px;
+      font-size:10px;
+      letter-spacing:.08em;
+      opacity:.66;
+    }
+
+    @media(max-width:980px){
+      :root{--header-h:82px}
+
+      .brand-group{
+        min-width:0;
+      }
+
+      .ks-brand{
+        width:120px;
+      }
+
+      .royal-brand{
+        width:160px;
+      }
+
+      .nav{
+        gap:18px;
+      }
+
+      .nav a{
+        font-size:9px;
+      }
+
+      .about-inner{
+        grid-template-columns:280px 1fr;
+      }
+
+      .about-photo{
+        height:450px;
+      }
+    }
+
+    @media(max-width:760px){
+      .site-header{
+        background:#fff!important;
+        color:var(--navy)!important;
+      }
+
+      .brand-group .royal-brand{
+        display:none;
+      }
+
+      .site-header.over-hero .ks-brand{
+        content:url("assets/kscottlogo2.png");
+      }
+
+      .nav{
+        display:none;
+      }
+
+      .menu-toggle{
+        display:block;
+      }
+
+      .hero{
+        min-height:650px;
+        height:85vh;
+      }
+
+      .hero video{
+        display:none;
+      }
+
+      .hero-title .team{
+        font-size:35px;
+      }
+
+      .hero-title .trusted{
+        font-size:46px;
+      }
+
+      .hero-title .from{
+        font-size:48px;
+      }
+
+      .intro h2{
+        font-size:39px;
+      }
+
+      .intro .lead{
+        font-size:22px;
+      }
+
+      .award-row{
+        gap:25px;
+        flex-wrap:wrap;
+      }
+
+      .about{
+        padding:70px 0;
+      }
+
+      .about-inner{
+        grid-template-columns:1fr;
+        width:min(620px,calc(100% - 40px));
+      }
+
+      .about-photo{
+        height:520px;
+      }
+
+      .property-grid,
+      .community-grid,
+      .market-grid{
         grid-template-columns:1fr;
       }
 
-      .statement-grid{gap:26px}
-      .story-collage{max-width:680px}
-      .coastal-image{min-height:68vw}
-      .community-grid{grid-template-columns:1fr 1fr}
-      .posts{grid-template-columns:1fr 1fr}
-      .post:first-child{grid-row:span 2}
-      .footer-main{grid-template-columns:1fr 1fr}
-      .footer-brand{grid-column:1/-1}
-    }
-
-    @media (max-width:680px){
-      :root{--gutter:22px}
-      .site-header{padding-top:11px}
-      .site-header.scrolled{padding-top:0}
-      .nav{min-height:73px}
-      .header-logo{width:155px}
-
-      .hero-inner{padding-top:128px;padding-bottom:35px}
-      .hero h1{font-size:clamp(3.8rem,17vw,6.2rem)}
-      .hero h1 span{padding-left:0}
-      .hero-lower{display:block}
-      .hero-scroll{display:none}
-      .hero-video{display:none}
-
-      .statement,
-      .story,
-      .communities,
-      .market,
-      .cta{padding-left:22px;padding-right:22px}
-
-      .statement h2 span{padding-left:7%}
-      .story-collage{padding-right:7%;padding-bottom:7%}
-      .story-inset{width:43%;border-width:7px}
-      .story-copy h2 span{padding-left:7%}
-
-      .properties-head{display:block}
-      .properties-head .button{margin-top:24px}
-      .properties-track{
-        grid-template-columns:none;
-        grid-auto-columns:82vw;
+      .feature-image{
+        height:58vw;
+        min-height:330px;
       }
 
-      .coastal-image{min-height:80vw}
-      .community-grid{grid-template-columns:1fr}
-      .community{min-height:235px}
-      .community .photo,
-      .community .shade{opacity:1}
-      .community .photo{transform:none}
-      .community h3{color:#fff}
-
-      .posts{grid-template-columns:1fr}
-      .post:first-child{grid-row:auto}
-      .post:first-child .post-image{aspect-ratio:4/3}
-
-      .footer-main{grid-template-columns:1fr}
-      .footer-brand{grid-column:auto}
-      .footer-links{grid-template-columns:1fr 1fr}
-      .footer-bottom{display:block}
-      .footer-bottom div+div{margin-top:8px}
-    }
-
-    @media (prefers-reduced-motion:reduce){
-      html{scroll-behavior:auto}
-      *,*::before,*::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        transition-duration:.01ms!important;
+      .property img,
+      .community-card img,
+      .market-card img{
+        height:auto;
+        aspect-ratio:16/10;
       }
-      .hero-video{display:none}
+
+      .nova-copy{
+        left:28px;
+        transform:none;
+        width:calc(100% - 56px);
+        bottom:50px;
+      }
+
+      .nova-copy .kicker{
+        font-size:38px;
+      }
+
+      .cta h2{
+        font-size:39px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="wrap nav">
-      <nav class="nav-side left" aria-label="Primary navigation">
-        <a href="#properties">Listings</a>
-        <a href="#communities">Communities</a>
-        <a href="#market">Journal</a>
-      </nav>
 
-      <a href="#top" class="header-logo" aria-label="Kevin Scott Real Estate Team home">
-        <img src="assets/kevinscottwhite.png" alt="Kevin Scott Real Estate Team">
-      </a>
+<header class="site-header over-hero" id="siteHeader">
+  <div class="header-inner">
 
-      <nav class="nav-side right" aria-label="Secondary navigation">
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact">Let's Talk</a>
-      </nav>
+    <div class="brand-group">
+      <img
+        class="ks-brand"
+        id="ksHeaderLogo"
+        src="assets/kevinscottwhite.png"
+        alt="Kevin Scott Real Estate Team">
 
-      <button class="menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <img
+        class="royal-brand"
+        id="royalHeaderLogo"
+        src="assets/royal.png"
+        alt="Royal LePage Atlantic">
     </div>
-  </header>
 
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-    <div class="mobile-menu-top">
-      <img class="mobile-menu-logo" src="assets/kevinscottwhite.png" alt="Kevin Scott Real Estate Team">
-      <button class="mobile-close" id="mobileClose" aria-label="Close menu">×</button>
-    </div>
-    <nav class="mobile-links" aria-label="Mobile navigation">
-      <a href="#properties">Listings</a>
-      <a href="#communities">Communities</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#top">Home</a>
+      <a href="#featured">Properties⌄</a>
+      <a href="#">Luxury Pre-Sale</a>
       <a href="#about">About</a>
-      <a href="#market">Journal</a>
+      <a href="#nova">Nova Scotia</a>
+      <a href="#communities">Communities</a>
+      <a href="#market">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+
   </div>
+</header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-poster" aria-hidden="true"></div>
+<main id="top">
 
-      <video
-        class="hero-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        poster="assets/hero-coast-poster.jpg"
-        aria-hidden="true">
-        <source src="assets/hero-coast-web.mp4" type="video/mp4">
-      </video>
+  <section class="hero" id="hero">
 
-      <div class="hero-shade"></div>
+    <div class="hero-poster"></div>
 
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <p class="eyebrow">Nova Scotia Real Estate</p>
-          <h1 class="display">
-            Trusted Here.
-            <span>From Anywhere.</span>
-          </h1>
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/hero-coast-poster.jpg">
 
-          <div class="hero-lower">
-            <p>Local knowledge, thoughtful strategy, and a team built to help you make your move with confidence.</p>
-            <div class="hero-scroll">Explore</div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <source
+        src="assets/hero-coast-web.mp4"
+        type="video/mp4">
 
-    <section class="statement">
-      <div class="wrap statement-grid">
-        <p class="eyebrow">Ready when</p>
-        <h2 class="display">the ocean <span>calls.</span></h2>
-      </div>
-    </section>
+    </video>
 
-    <section class="story" id="about">
-      <div class="wrap story-grid">
-        <div class="story-collage">
-          <div class="story-main">
-            <img src="assets/kevin.jpg" alt="Kevin Scott">
-          </div>
-          <div class="story-inset">
-            <img src="assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg" alt="Nova Scotia coast">
-          </div>
-        </div>
+    <div class="hero-content">
+      <div class="hero-title">
 
-        <div class="story-copy">
-          <p class="eyebrow">The founder & CEO</p>
-          <h2 class="display">Meet <span>Kevin</span></h2>
-          <p class="sub">Local perspective. Big-picture strategy.</p>
+        <span class="team">
+          Kevin Scott <em>Real Estate Team</em>
+        </span>
 
-          <p>I’m Kevin Scott—an award-winning REALTOR®, a marketing guy at heart, and the founder of a growing team of local real estate professionals here in Nova Scotia. I made the move here myself a few years ago, and since then, I’ve proudly made this province home—not just for where I live, but for how I live.</p>
+        <span class="trusted">
+          Trusted Here.
+        </span>
 
-          <p>I’ve built my business around connection—between provinces, between people, and between local knowledge and big-picture strategy. Our approach is client-first, hyper-local, and deeply committed to making your experience as smooth and successful as possible.</p>
+        <span class="from">
+          From Anywhere.
+        </span>
 
-          <a class="button" href="#">Read More</a>
-
-          <div class="story-quote">
-            Whether you're moving in, moving up, or moving on—we're here to help you do it with confidence.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="properties" id="properties">
-      <div class="wrap properties-head">
-        <h2 class="display">Featured <span>Properties</span></h2>
-        <a class="button light" href="#">View all listings</a>
-      </div>
-
-      <div class="properties-track">
-        <article class="property">
-          <div class="property-image">
-            <img src="assets/feature.jpg" alt="Featured listing">
-          </div>
-          <div class="property-body">
-            <div class="property-status">For Sale</div>
-            <h3>566 Lakeland Drive</h3>
-            <div class="property-place">Arlington West, NS</div>
-            <div class="property-price">$383,000</div>
-            <div class="property-mls">MLS® 202610923</div>
-          </div>
-        </article>
-
-        <article class="property">
-          <div class="property-image">
-            <img src="assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg" alt="Property photography placeholder">
-          </div>
-          <div class="property-body">
-            <div class="property-status">For Sale</div>
-            <h3>83 Lakecrest Drive</h3>
-            <div class="property-place">East Uniacke, NS</div>
-            <div class="property-price">$599,000</div>
-            <div class="property-mls">MLS® 202622474</div>
-          </div>
-        </article>
-
-        <article class="property">
-          <div class="property-image">
-            <img src="assets/livia-widjaja-VuO467wMZQI-unsplash.jpg" alt="Property photography placeholder">
-          </div>
-          <div class="property-body">
-            <div class="property-status">For Sale</div>
-            <h3>12337 Highway 3 Highway</h3>
-            <div class="property-place">Rhodes Corner, NS</div>
-            <div class="property-price">$1,099,000</div>
-            <div class="property-mls">MLS® 202621750</div>
-          </div>
-        </article>
-
-        <article class="property">
-          <div class="property-image">
-            <img src="assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg" alt="Property photography placeholder">
-          </div>
-          <div class="property-body">
-            <div class="property-status">For Sale</div>
-            <h3>5019 201 Highway</h3>
-            <div class="property-place">West Paradise, NS</div>
-            <div class="property-price">$949,000</div>
-            <div class="property-mls">MLS® 202620110</div>
-          </div>
-        </article>
-      </div>
-
-      <div class="properties-foot">
-        <a class="button light" href="#">See our interactive brochures</a>
-      </div>
-    </section>
-
-    <section class="coastal">
-      <div class="coastal-image" role="img" aria-label="Rocky Nova Scotia coastline"></div>
-
-      <div class="coastal-copy">
-        <p class="eyebrow">Nova Scotia</p>
-        <h2 class="display">The Joy of<br><span>Coastal Living</span></h2>
-        <p>Nova Scotia is more than just a stunning coastal destination—it’s a place deeply rooted in history, culture, and character. From its storied maritime past to its vibrant creative scene, it offers an unmatched blend of natural beauty and community spirit.</p>
-        <div><a class="button" href="#">Learn More</a></div>
-      </div>
-    </section>
-
-    <section class="communities" id="communities">
-      <div class="wrap">
-        <div class="communities-head">
-          <p class="eyebrow">Explore the province</p>
-          <h2 class="display">Nova Scotia <span>Communities</span></h2>
-        </div>
-
-        <div class="community-grid">
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>Annapolis Valley Region</h3>
-          </a>
-
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/snap-shoot-42GlMxOlD4w-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>Yarmouth Region</h3>
-          </a>
-
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>Halifax & HRM Region</h3>
-          </a>
-
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/livia-widjaja-VuO467wMZQI-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>Cape Breton Region</h3>
-          </a>
-
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>South Shore</h3>
-          </a>
-
-          <a class="community" href="#">
-            <span class="photo" style="background-image:url('assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg')"></span>
-            <span class="shade"></span>
-            <h3>Highland Region</h3>
-          </a>
-        </div>
-
-        <a class="button" href="#">Browse All Communities</a>
-      </div>
-    </section>
-
-    <section class="market" id="market">
-      <div class="wrap">
-        <h2 class="display market-title">
-          <span>From</span>
-          <span>the</span>
-          <span>Market</span>
-        </h2>
-
-        <div class="posts">
-          <article class="post">
-            <div class="post-image">
-              <img src="assets/karl-hedin-0444my5elHQ-unsplash.jpg" alt="Nova Scotia lifestyle">
-            </div>
-            <div class="post-meta">Real Estate · Nova Scotia</div>
-            <h3>Every Home Has a Story Worth Telling</h3>
-          </article>
-
-          <article class="post">
-            <div class="post-image">
-              <img src="assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg" alt="Nova Scotia coast">
-            </div>
-            <div class="post-meta">Advice · Buying & Selling</div>
-            <h3>Market Knowledge is Great, But Your Agent’s Network Can Make All The Difference</h3>
-          </article>
-
-          <article class="post">
-            <div class="post-image">
-              <img src="assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg" alt="Nova Scotia shoreline">
-            </div>
-            <div class="post-meta">Home · Renovation</div>
-            <h3>Which Home Renovations Add the Most Sale Value?</h3>
-          </article>
-        </div>
-
-        <a class="button" href="#">View More Posts</a>
-      </div>
-    </section>
-
-    <section class="cta" id="contact">
-      <div class="wrap">
-        <img class="cta-mark" src="assets/KSRE_v2_knot_navy_blue.png" alt="" aria-hidden="true">
-        <p class="eyebrow">Let's make your move</p>
-        <h2 class="display">
-          A Friendly Face, A Local Expert,
-          <span>A Smart Move.</span>
-        </h2>
-        <p>From coastal cottages to city homes, these are the properties KSRE is proud to represent. If Nova Scotia is calling, the team is ready to help you find your way home.</p>
-        <a class="button" href="mailto:kevinscott@royallepage.ca">Contact Us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <img class="footer-logo" src="assets/kevinscottwhite.png" alt="Kevin Scott Real Estate Team">
-          <img class="footer-royal" src="assets/royal.png" alt="Royal LePage Atlantic">
-        </div>
-
-        <div>
-          <div class="footer-heading">Contact</div>
-          <p>8999 Commercial St<br>New Minas, NS B4N 3E3</p>
-          <p>
-            <a href="mailto:kevinscott@royallepage.ca">kevinscott@royallepage.ca</a><br>
-            902-321-3468 (NS)<br>
-            416-473-3468 (ON)
-          </p>
-        </div>
-
-        <div>
-          <div class="footer-heading">Explore</div>
-          <div class="footer-links">
-            <a href="#properties">Listings</a>
-            <a href="#about">About</a>
-            <a href="#communities">Communities</a>
-            <a href="#market">Journal</a>
-            <a href="#contact">Contact</a>
-            <a href="#">Instagram</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>© 2026 Kevin Scott Real Estate Team</div>
-        <div>Independent member of Royal LePage Atlantic</div>
       </div>
     </div>
-  </footer>
 
-  <script>
-    const siteHeader = document.querySelector('.site-header');
-    const menuButton = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
+  </section>
 
-    function updateHeader(){
-      siteHeader.classList.toggle('scrolled', window.scrollY > 70);
+  <section class="intro">
+
+    <h2>
+      Ready When <em>the Ocean Calls.</em>
+    </h2>
+
+    <div class="lead">
+      When you’re making a move, you don’t just need a REALTOR® — you need a team you can trust.
+      A team that knows the local market, understands your goals, and shows up with strategy,
+      heart, and hustle.
+    </div>
+
+    <div class="script">
+      That’s where we come in.
+    </div>
+
+    <div class="intro-rule"></div>
+
+    <div class="awards">
+
+      <h3>AWARDS</h3>
+
+      <div class="award-row">
+
+        <div class="award-placeholder">
+          ROYAL LEPAGE<br>
+          RED DIAMOND<br>
+          <small>AWARD 2022</small>
+        </div>
+
+        <div class="award-placeholder royal">
+          <img
+            src="assets/royalnavy.png"
+            alt="Royal LePage Atlantic">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="about" id="about">
+
+    <div class="about-inner">
+
+      <div class="about-photo">
+        <img
+          src="assets/kevin.jpg"
+          alt="Kevin Scott">
+      </div>
+
+      <div class="about-copy">
+
+        <h2>MEET KEVIN</h2>
+
+        <h3>THE FOUNDER AND CEO</h3>
+
+        <p>
+          I’m Kevin Scott—an award-winning REALTOR®, a marketing guy at heart,
+          and the founder of a growing team of local real estate professionals here
+          in Nova Scotia. I made the move here myself a few years ago, and since then,
+          I’ve proudly made this province home—not just for where I live, but for how I live.
+        </p>
+
+        <p>
+          I’ve built my business around connection—between provinces, between people,
+          and between local knowledge and big-picture strategy. The Kevin Scott Real Estate
+          team understands that connection—as well as the neighbourhoods, the communities,
+          and the pace of life here.
+        </p>
+
+        <p>
+          We’ve built our team to serve Nova Scotia with agents who live where they work
+          and genuinely care about the place that they proudly represent. Our approach is
+          client-first, hyper-local, and deeply committed to making your experience as smooth
+          and successful as possible.
+        </p>
+
+        <a class="btn brown" href="#">
+          Read More
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="quote">
+
+    <div class="quote-mark">
+      “
+    </div>
+
+    <p>
+      Whether you’re moving in, moving up, or moving on—we’re here to help you do it with confidence.
+    </p>
+
+    <div class="welcome serif">
+      Welcome home.
+    </div>
+
+  </section>
+
+  <section class="featured" id="featured">
+
+    <h2 class="section-title">
+      Featured <em>Properties</em>
+    </h2>
+
+    <div class="feature-hero">
+
+      <div class="feature-image">
+        <img
+          src="assets/feature.jpg"
+          alt="Featured property">
+      </div>
+
+    </div>
+
+    <div class="feature-info">
+
+      <div class="statusbar">
+        For Sale
+      </div>
+
+      <div class="feature-body">
+
+        <h3>
+          566 Lakeland Drive
+        </h3>
+
+        <div class="place">
+          Arlington West, NS
+        </div>
+
+        <div class="price">
+          $ 383,000
+        </div>
+
+        <div class="mls">
+          MLS® 202610923
+        </div>
+
+        <div class="courtesy">
+          Listing courtesy of Royal LePage Atlantic (New Minas).
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="property-grid">
+
+      <article class="property">
+
+        <img
+          src="assets/snap-shoot-42GlMxOlD4w-unsplash.jpg"
+          alt="">
+
+        <div class="statusbar">
+          Conditionally Sold
+        </div>
+
+        <div class="property-body">
+
+          <h3>
+            83 Lakecrest Drive
+          </h3>
+
+          <div class="place">
+            East Uniacke, NS
+          </div>
+
+          <div class="price">
+            $ 599,000
+          </div>
+
+          <div class="mls">
+            MLS® 202622474
+          </div>
+
+          <div class="courtesy">
+            Listing courtesy of Royal LePage Atlantic (New Minas).
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="property">
+
+        <img
+          src="assets/livia-widjaja-VuO467wMZQI-unsplash.jpg"
+          alt="">
+
+        <div class="statusbar">
+          For Sale
+        </div>
+
+        <div class="property-body">
+
+          <h3>
+            12337 Highway 3 Highway
+          </h3>
+
+          <div class="place">
+            Rhodes Corner, NS
+          </div>
+
+          <div class="price">
+            $ 1,099,000
+          </div>
+
+          <div class="mls">
+            MLS® 202621750
+          </div>
+
+          <div class="courtesy">
+            Listing courtesy of Royal LePage Atlantic (New Minas).
+          </div>
+
+        </div>
+
+      </article>
+
+      <article class="property">
+
+        <img
+          src="assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg"
+          alt="">
+
+        <div class="statusbar">
+          For Sale
+        </div>
+
+        <div class="property-body">
+
+          <h3>
+            5019 201 Highway
+          </h3>
+
+          <div class="place">
+            West Paradise, NS
+          </div>
+
+          <div class="price">
+            $ 949,000
+          </div>
+
+          <div class="mls">
+            MLS® 202620110
+          </div>
+
+          <div class="courtesy">
+            Listing courtesy of Royal LePage Atlantic (New Minas).
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="featured-actions">
+
+      <a
+        class="btn brown"
+        href="#">
+
+        See our interactive brochures
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="nova" id="nova">
+
+    <div class="nova-copy">
+
+      <div class="kicker">
+        NOVA SCOTIA
+      </div>
+
+      <h2>
+        The Joy of Coastal Living
+      </h2>
+
+      <p>
+        Nova Scotia is more than just a stunning coastal destination—it’s a place deeply rooted
+        in history, culture, and character. From its storied maritime past to its vibrant creative
+        scene, it’s a province which offers an unmatched blend of natural beauty and community spirit.
+        Whether you’re new here or born here, there’s always more to discover.
+      </p>
+
+      <a
+        class="btn brown"
+        href="#">
+
+        Learn More
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="communities" id="communities">
+
+    <h2>
+      Nova Scotia <em>Communities</em>
+    </h2>
+
+    <div class="community-grid">
+
+      <article class="community-card">
+
+        <img
+          src="assets/snap-shoot-42GlMxOlD4w-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Annapolis Valley Region
+        </h3>
+
+      </article>
+
+      <article class="community-card">
+
+        <img
+          src="assets/jonathan-cooper-73NhUAQBoHI-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Halifax & HRM Region
+        </h3>
+
+      </article>
+
+      <article class="community-card">
+
+        <img
+          src="assets/robert-langlois-b1zUUDDt7oY-unsplash.jpg"
+          alt="">
+
+        <h3>
+          South Shore
+        </h3>
+
+      </article>
+
+      <article class="community-card">
+
+        <img
+          src="assets/livia-widjaja-VuO467wMZQI-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Yarmouth Region
+        </h3>
+
+      </article>
+
+      <article class="community-card">
+
+        <img
+          src="assets/audrey-dandurand-EdeJfwWNa70-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Cape Breton Region
+        </h3>
+
+      </article>
+
+      <article class="community-card">
+
+        <img
+          src="assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Highland Region
+        </h3>
+
+      </article>
+
+    </div>
+
+    <div class="action">
+
+      <a
+        class="btn brown"
+        href="#">
+
+        Browse All Communities
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="market" id="market">
+
+    <h2>
+      From <em>the Market</em>
+    </h2>
+
+    <div class="market-grid">
+
+      <article class="market-card">
+
+        <img
+          src="assets/karl-hedin-0444my5elHQ-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Every Home Has a Story Worth Telling
+        </h3>
+
+      </article>
+
+      <article class="market-card">
+
+        <img
+          src="assets/kevin.jpg"
+          alt="">
+
+        <h3>
+          Market Knowledge is Great, But Your Agent’s Network Can Make All The Difference
+        </h3>
+
+      </article>
+
+      <article class="market-card">
+
+        <img
+          src="assets/erik-mclean-bVE8tpEvjDE-unsplash.jpg"
+          alt="">
+
+        <h3>
+          Which Home Renovations Add the Most Sale Value?
+        </h3>
+
+      </article>
+
+    </div>
+
+    <div class="action">
+
+      <a
+        class="btn brown"
+        href="#">
+
+        View More Posts
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="cta" id="contact">
+
+    <div class="cta-inner">
+
+      <img
+        class="cta-knot"
+        src="assets/KSRE_v2_knot_navy_blue.png"
+        alt="">
+
+      <h2>
+        A Friendly Face, A Local Expert,
+        <em>A Smart Move.</em>
+      </h2>
+
+      <p>
+        From coastal cottages to city homes, these are the properties KSRE is proud to represent.
+        View what’s available now and what we’ve recently sold across Nova Scotia.
+      </p>
+
+      <a
+        class="btn"
+        href="#">
+
+        Contact Us
+
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <img
+    class="ks-white"
+    src="assets/kevinscottwhite.png"
+    alt="Kevin Scott Real Estate Team">
+
+  <div class="contact">
+
+    8999 COMMERCIAL ST<br>
+    New Minas, NS B4N 3E3<br>
+    E. kevinscott@royallepage.ca<br>
+    T. 902-321-3468 (NS)<br>
+    T. 416-473-3468 (ON)
+
+  </div>
+
+  <div class="social">
+
+    <span>◎</span>
+    <span>●</span>
+    <span>in</span>
+
+  </div>
+
+  <img
+    class="royal-white"
+    src="assets/royal.png"
+    alt="Royal LePage Atlantic">
+
+  <div class="footer-rule"></div>
+
+  <div class="newsletter">
+
+    <h3>
+      JOIN OUR COMMUNITY
+    </h3>
+
+    <p>
+      Subscribe now and get our exclusive content on all things real estate.
+    </p>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Kevin Scott Real Estate Team
+  </div>
+
+</footer>
+
+<script>
+  const header = document.getElementById('siteHeader');
+  const ksLogo = document.getElementById('ksHeaderLogo');
+  const royalLogo = document.getElementById('royalHeaderLogo');
+  const hero = document.getElementById('hero');
+
+  function updateHeader(){
+
+    const onHero =
+      window.scrollY < (hero.offsetHeight - 95);
+
+    header.classList.toggle(
+      'over-hero',
+      onHero
+    );
+
+    if(onHero){
+
+      ksLogo.src =
+        'assets/kevinscottwhite.png';
+
+      royalLogo.src =
+        'assets/royal.png';
+
+    }else{
+
+      ksLogo.src =
+        'assets/kscottlogo2.png';
+
+      royalLogo.src =
+        'assets/royalnavy.png';
+
     }
-    updateHeader();
-    window.addEventListener('scroll', updateHeader, { passive:true });
-    const mobileClose = document.getElementById('mobileClose');
-    const mobileLinks = mobileMenu.querySelectorAll('a');
 
-    function openMenu(){
-      mobileMenu.classList.add('open');
-      mobileMenu.setAttribute('aria-hidden','false');
-      menuButton.setAttribute('aria-expanded','true');
-      document.body.classList.add('menu-open');
-    }
+  }
 
-    function closeMenu(){
-      mobileMenu.classList.remove('open');
-      mobileMenu.setAttribute('aria-hidden','true');
-      menuButton.setAttribute('aria-expanded','false');
-      document.body.classList.remove('menu-open');
-    }
+  updateHeader();
 
-    menuButton.addEventListener('click', openMenu);
-    mobileClose.addEventListener('click', closeMenu);
-    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+  window.addEventListener(
+    'scroll',
+    updateHeader,
+    {passive:true}
+  );
+</script>
 
-    document.addEventListener('keydown', (event) => {
-      if(event.key === 'Escape') closeMenu();
-    });
-  </script>
 </body>
 </html>
